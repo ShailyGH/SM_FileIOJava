@@ -12,13 +12,14 @@ public class ReadOne
         try {
             // Create the Scanner object using the file
             // as input
-            Scanner fileIn = new Scanner(new File("input.txt"));
+            File starting = new File(System.getProperty("user.dir"));
+            Scanner fileIn = new Scanner(new File(starting,"/Step1/input.txt"));
             
             /* Loop while the file still has lines.
              * .hasNext() looks to see if a line exists
              * but it doesn't read the line.
              */
-            while (fileIn.hasNext()) 
+            while (fileIn.hasNext())
             {
                 // Reads the entire line
                 String lineIn = fileIn.nextLine(); 
