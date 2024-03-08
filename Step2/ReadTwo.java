@@ -9,7 +9,8 @@ public class ReadTwo
     public static void main(String[] args)
     {
         try {
-            Scanner fileIn = new Scanner(new File("input.txt"));
+            File starting = new File(System.getProperty("user.dir"));
+            Scanner fileIn = new Scanner(new File(starting, "/Step2/input.txt"));
 
             while (fileIn.hasNext()) 
             {
