@@ -10,9 +10,11 @@ public class ReadThree
     public static void main(String[] args)
     {
         try{
+            File starting = new File(System.getProperty("user.dir"));
             System.out.print("Writing to file ... ");
             // Create the file to write to
-            PrintWriter fileOut = new PrintWriter("output.txt");
+            File Fileright = new File("/Users/shaily/Projects/SM_FileIOJava/Step3/output.txt");
+            PrintWriter fileOut = new PrintWriter(Fileright);
             // Write text just like we would to the console
             fileOut.println("Hello ");
             // Clode out file
@@ -21,7 +23,7 @@ public class ReadThree
             System.out.println("Done!");
             
             // Read in file to verify it
-            Scanner fileIn = new Scanner(new File("output.txt"));
+            Scanner fileIn = new Scanner(new File(starting, "/Step3/output.txt"));
             
             System.out.println("Reading from file ... ");
             while (fileIn.hasNext()) 
